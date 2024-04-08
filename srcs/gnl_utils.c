@@ -1,22 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   gnl_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkoechli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/14 18:28:29 by gkoechli          #+#    #+#             */
-/*   Updated: 2021/12/10 19:21:28 by gkoechli         ###   ########.fr       */
+/*   Created: 2021/11/30 13:23:44 by gkoechli          #+#    #+#             */
+/*   Updated: 2021/12/10 17:06:47 by gkoechli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
-void	ft_bzero(void *s, size_t n)
+int	check_line(char *str)
 {
-	char	*s2;
+	int	i;
 
-	s2 = s;
-	while (n-- > 0)
-		*s2++ = '\0';
+	i = 1;
+	if (!str)
+		return (0);
+	while (str && str[i - 1] != '\0')
+	{
+		if (str[i - 1] == '\n')
+			return (i);
+		i++;
+	}
+	if (i == (int)ft_strlen(str))
+		return (i);
+	return (0);
+}
+
+int	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str && str[i])
+		i++;
+	return (i);
 }

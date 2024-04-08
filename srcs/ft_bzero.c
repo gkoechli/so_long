@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkoechli <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/15 15:50:29 by gkoechli          #+#    #+#             */
-/*   Updated: 2021/12/10 19:39:24 by gkoechli         ###   ########.fr       */
+/*   Created: 2019/11/14 18:28:29 by gkoechli          #+#    #+#             */
+/*   Updated: 2021/12/10 19:21:28 by gkoechli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "../so_long.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_bzero(void *s, size_t n)
 {
-	void	*s;
+	char	*s2;
 
-	s = malloc(size * count);
-	if (s == NULL)
-		return (0);
-	ft_bzero(s, size * count);
-	return (s);
+	s2 = s;
+	while (n-- > 0)
+		*s2++ = '\0';
 }

@@ -6,15 +6,15 @@ FLAGS = -Wall -Werror -Wextra -g
 
 OPTIONS = -lX11 -lXext
 
-SRC = so_long.c	\
-      utils.c	\
-      utils_2.c	\
-      mapcheck_error.c	\
-      gnl.c	\
-      gnl_utils.c	\
-	  ft_bzero.c	\
-	  ft_calloc.c	\
-	  utils_3.c
+SRC = srcs/so_long.c	\
+      srcs/utils.c	\
+      srcs/utils_2.c	\
+      srcs/mapcheck_error.c	\
+      srcs/gnl.c	\
+      srcs/gnl_utils.c	\
+	  srcs/ft_bzero.c	\
+	  srcs/ft_calloc.c	\
+	  srcs/utils_3.c
 
 $(NAME): $(OBJS)
 	$(MAKE) -C ./mlx/minilibx-linux/
