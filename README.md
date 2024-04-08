@@ -6,4 +6,5 @@ Git clone the repository and cd into it. Then use make to compile.
  // might need to download some libraries if they are missing.
 
 Then run it with : ./so_long mapX.ber 
-X = 1, 2, 3 or 4
+
+(X = 1, 2, 3 or 4)
